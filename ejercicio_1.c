@@ -30,7 +30,7 @@ int main()
     struct circunferencia C1, C2;
     printf("----Intersección de circunferencias----\n");
     
-    printf("\nPara el circulo 1:\n");
+    printf("\nPara la circunferencia 1:\n");
     printf("Coordenada X del centro: ");
     scanf("%f", &C1.X);
     printf("Coordenada Y del centro: ");
@@ -38,7 +38,7 @@ int main()
     printf("Radio: ");
     scanf("%f", &C1.radio);
     
-    printf("\nPara el circulo 2:\n");
+    printf("\nPara la circunferencia 2:\n");
     printf("Coordenada X del centro: ");
     scanf("%f", &C2.X);
     printf("Coordenada Y del centro: ");
