@@ -7,7 +7,7 @@ struct circunferencia{
     float radio;
 };
 
-void Intersección(struct circunferencia circ1, struct circunferencia circ2){
+void Interseccion(struct circunferencia circ1, struct circunferencia circ2){
     float distanciaX;
     float distanciaY;
     distanciaX= circ2.X - circ1.X;
@@ -51,7 +51,7 @@ int main()
         return 1;
     }
     
-    Intersección(C1, C2);
+    Interseccion(C1, C2);
     
     return 0;
 }
