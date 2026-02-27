@@ -41,7 +41,7 @@ int main () {
                 }
                 if (intInput == 5) break;
                 promosTam[intInput-1] ++;
-                printf("%d", intInput-1);
+                //printf("%d", intInput-1);
 
                 primero = 1;
 
@@ -98,7 +98,7 @@ int main () {
                 scanf(" %c", &input);
         } while (input == 's' || input == 'S');
 
-        printf("|%d %d %d %d|", promosTam[0], promosTam[1], promosTam[2], promosTam[3]);
+        //printf("|%d %d %d %d|", promosTam[0], promosTam[1], promosTam[2], promosTam[3]);
         //Impresion de ticket
         numPizzas = promosTam[0]+promosTam[1]+promosTam[2]+promosTam[3];
         printf("\nTicket de compra-------------------\n");
@@ -121,7 +121,7 @@ int main () {
                         printf("Familiar");
                 }
                 printf(".............%.2f", pizzapuntador->precio);
-                if (!promosTam[pizzapuntador->tamano-1]%2) printf("---cancelado por 2x1");
+                if (!(promosTam[pizzapuntador->tamano-1]%2)) printf("---cancelado por 2x1");
                 else costoTotal += pizzapuntador->precio;
                 promosTam[pizzapuntador->tamano-1] --;
 
