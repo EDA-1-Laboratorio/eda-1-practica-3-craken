@@ -99,6 +99,18 @@ int mano(struct cartas cartass[]) {
 
     return 0;
 }
+
+int cartamasalta(struct cartas cartass[]){
+	int puntajemayor=0;
+	for(int i=0; i<7; i++){
+		if(cartass[i].puntaje>puntajemayor){
+			puntajemayor=cartass[i].puntaje;
+		}
+	}
+	return puntajemayor;
+}
+
+
 int main()
 {
 	int i=0, in=0, g=0;
@@ -153,6 +165,26 @@ int main()
 					}
 
 				resultado[i] = mano(totalcartas);
+				if (resultado[i]==9)
+					printf("El jugador %d tiene Corrida real\n", i+1);
+				else if (resultado[i]==8)
+					printf("El jugador %d tiene Corrida de color\n", i+1);
+					else if (resultado[i]==7)
+						printf("El jugador %d tiene Póker\n", i+1);
+						else if (resultado[i]==6)
+							printf("El jugador %d tiene Casa Llena\n", i+1);
+							else if (resultado[i]==5)
+								printf("El jugador %d tiene Color\n", i+1);
+								else if (resultado[i]==4)
+									printf("El jugador %d tiene Corrida\n", i+1);
+									else if (resultado[i]==3)
+										printf("El jugador %d tiene Tercia\n", i+1);
+										else if (resultado[i]==2)
+											printf("El jugador %d tiene Dos Pares\n", i+1);
+											else if (resultado[i]==1)
+												printf("El jugador %d tiene Un par\n", i+1);
+												else if (resultado[i]==0)
+													printf("El jugador %d tiene Carta más alta %d\n", i+1, cartamasalta(totalcartas));
 				}
 				for(i=1;i<jugadores;i++){
 					if (resultado[i]>resultado[g]){
